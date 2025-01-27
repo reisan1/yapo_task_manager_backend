@@ -1,11 +1,11 @@
 <?php
 
 return [
+    'default' => env('LOG_CHANNEL', 'stack'),  // Will default to 'stack' unless changed
+
     'channels' => [
-        'single' => [
-            'driver' => 'single',
-            'path' => '/tmp/lumen-'.date('Y-m-d').'.log',
-            'level' => 'debug',
+        'stack' => [
+            'driver' => 'null',  // Disable the stack logging channel
         ],
     ],
 ];
