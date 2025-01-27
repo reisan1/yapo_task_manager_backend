@@ -13,6 +13,8 @@ class TaskSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('tasks')->delete();
+
         DB::table('tasks')->insert([
             [
                 'name' => 'Learn Basic Grammar',
